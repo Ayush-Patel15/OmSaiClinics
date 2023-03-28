@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title> Om Sai Clinic </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!--Ajax Utils -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/ajax_utils.js') }}"></script>
+  <!-- script js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+
+<body>
+  <!--Large background images/poster-->
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <img src="{{ url_for('static', filename='images/doc-banner.jpg') }}" alt="background image">
+    </div>
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="#top_section">
+            <span>
+              Om Sai Clinic
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#appointment">Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutUs">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#honours_awards">Awards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactUs">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  
+    <!-- slider section -->
+    <section class="slider_section" id="top_section">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      Dr. Pooja Pardhi Bisen
+                    </h1>
+                    <p>
+                      MBBS, DNB (General Medicine), CCEBDM<br>
+                      Consulting, Physician & Diabetologist
+                    </p>
+                    <div class="btn-box">
+                      <a href="#aboutUs" class="btn1">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      We Provide Best Healthcares
+                    </h1>
+                    <p>
+                      Our team of medical experts is there for you, from finding the right medicines and consulting to booking appointments and giving any kind of medical help in between.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      Our Mission & Vision 
+                    </h1>
+                    <p>
+                      We work as a team to help you Stay Healthy, when you have a disease.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+<!--hearo_area div closing-->  
+
+<!--Appointment Section--> 
+<section id="appointment" class="appointment">
+  <div class="container">
+
+    <div class="section-title">
+      <h2 class="text-center">Book Appointment</h2>
+      <p class="text-center">
+        Book your appointment and visit us..!
+      </p>
+    </div>
+    <div class="detail-box">
+      <div class="appointment_form">
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <input type="text" name="username" class="form-control" id="username" placeholder="Your Name"
+            minlength="3" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-6 form-group mt-3">
+            <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your Phone number" minlength="10" maxlength="10" required>
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <input type="date" name="date" class="form-control date" id="date" placeholder="dd-mm-yyyy" required>
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-6 form-group mt-3">
+            <select name="slot" id="slots" class="form-select form-slots" required>
+              <option value="">Select Time Slot</option>
+                <option value="08:00 - 08:15">08:00 - 08:15 AM</option>
+                <option value="08:15 - 08:30">08:15 - 08:30 AM</option>
+                <option value="08:30 - 08:45">08:30 - 08:45 AM</option>
+                <option value="08:45 - 09:00">08:45 - 09:00 AM</option>
+                <option value="09:00 - 09:15">09:00 - 09:15 AM</option>
+                <option value="09:15 - 09:30">09:15 - 09:30 AM</option>
+                <option value="09:30 - 09:45">09:30 - 09:45 AM</option>
+                <option value="09:45 - 10:00">09:45 - 10:00 AM</option>
+                <option value="10:00 - 10:15">10:00 - 10:15 AM</option>
+                <option value="10:15 - 10:30">10:15 - 10:30 AM</option>
+                <option value="10:30 - 10:45">10:30 - 10:45 AM</option>
+                <option value="10:45 - 11:00">10:45 - 11:00 AM</option>
+                <option value="11:00 - 11:15">11:00 - 11:15 AM</option>
+                <option value="11:15 - 11:30">11:15 - 11:30 AM</option>
+                <option value="11:30 - 11:45">11:30 - 11:45 AM</option>
+                <option value="11:45 - 12:00">11:45 - 12:00 AM</option>
+                <option value="12:00 - 12:15">12:00 - 12:15 PM</option>
+                <option value="12:15 - 12:30">12:15 - 12:30 PM</option>
+                <option value="12:30 - 12:45">12:30 - 12:45 PM</option>
+                <option value="12:45 - 13:00">12:45 - 13:00 PM</option>
+            </select>
+            <div class="validate"></div>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="error_msg text-danger text-center" id="errorMsg"></div>
+        <div class="check-appointment text-center">
+          <button type="submit" onclick="bookAppointment();">Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Appointment Section -->
+
+<!-- Booking confirmation PopUp message -->
+<section class="success_confirmation" id="successConfirmation"></section>
+
+<!-- about section -->
+  <section id="aboutUs" class="about_section layout_margin-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/doctors_image.jpg') }}" alt="doctor_img">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About <span>Us</span>
+              </h2>
+            </div>
+            <p class="about-intro">
+              <b><u>Dr. Pooja Pardhi Bisen</u></b><br>
+              MBBS - Government Medical College Nagpur, 2007<br>
+              DNB (General Medicine)<br>
+              CCEBDM - Certificate course in evidence-based diabetes mellitus
+            </p>
+            <p class="about-clinical-expertise">
+              <b><u>Clinical Expertise</u></b>
+              <ul>
+                <li>12 Year's Experience in Clinical and Patient Management</li>
+                <li>Specialist in ICU Management and Care (INTENSIVIST)</li>
+                <li>Infectious Diseases</li>
+                <li>Diabetes Management</li>
+                <li>Hypertension Management</li>
+                <li>Asthma Management</li>
+                <li>Liver diseases</li>
+                <li>Specialist in ARDS Management</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+<!-- Honours  Awards section -->
+<section id="honours_awards" class="honours_awards_section">
+  <div class="awards_container">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Honours & Awards
+        </h2>
+        <p>
+          Member of association of medical consultants, Mumbai
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/certificate_course2.png') }}" alt="certificate">
+            </div>
+            <div class="detail-box">
+              <p>
+                certificate course in “current management strategies in the field of hiv” held at columbia asia hospital, bangalore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/medical_pathology.png') }}" alt="pathology">
+            </div>
+            <div class="detail-box">
+              <p>
+                “MEDINSPIRE” 2019 an international multidisciplinary medical summit on pathology update
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/immunization.png') }}" alt="immunization">
+            </div>
+            <div class="detail-box">
+              <p>
+                certification course in immunization training held at health and family welfare training centre, nagpur
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/diabetes.png') }}" alt="diabetes">
+            </div>
+            <div class="detail-box">
+              <p>
+                certification of RSSDI (research society for the study of diabetes in india) karnataka chapter
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end Honours  Awards section -->
+  
+<!-- client/testimonials section -->
+<section class="client_section layout_padding-bottom" id="testimonials">
+  <div class="container">
+    <div class="heading_container heading_center ">
+      <h2>
+        Testimonials
+      </h2>
+    </div>
+    <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/kiG5EvXZGhdgxdTd7" target="_blank">Merlyn Zabeth</a>
+                    </h6>
+                  </div>
+                  <p>
+                    When the doctor is caring and attentive half of the illness subdues on its own, with Dr.Pooja, you immediately feel at ease that you are in extremely safe hands. She is knowledgeable, informative, sensitive and most importantly empathetic towards her patients. A lot of doctors forget that patients come to them not just for treatment but also that they want to be heard by an expert, with Dr.Pooja you will never feel rushed, she takes her time to listen to you and explain your condition and the treatment options, she will discuss and understand your lifestyle and accordingly crafts a practical treatment for you. And that's what makes her different, as these days it's rare to find a doctor who combines such personal touches and care with proper treatment. l am very happy with her diagnosis and treatment. I highly recommend Dr.Pooja.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/YvmDvXFWJD3JSfrDA" target="_blank">Rahul Shukla</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Doctor Pooja is one of best Consulting Physician in Navi Mumbai. She knows what is best for the patient. Very knowledgeable and brilliant doctor. She have treated my Cousin for cardiac arrest. The improvement in my Cousin health  is tremendous. She is very polite and very helpful. She is a real life Doctor with Helpful Nature. Keep up the good job ! God bless u doctor! 😊
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/BBVoiiLwLtDs6fPB9" target="_blank">Navdeep Thakur</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Dr. Pooja is very professional in her approach. She understands the health issues precisely and provides detailed explanation on cause and diagnostics which followed by right treatment and medicine prescription. I am really thankful to the doctor for advising treatment related to health problems and recommend everyone to take her consultation in case you find yourself in a situation where need medical support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/x3MYBDi8LKPdU3Cw6" target="_blank">Prabhala B V Subba Rao</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Services received from Shelar Hospital are excellent. Dr. Pooja Pardhi and staff are friendly and ensure that I am properly informed about my mother’s health and care. Dr. Pooja is very caring and concerned. I am thankful for the excellent care taken by them. I have no doubts in recommending them to my friends and relatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/G8FvWaS4JpLdRUau5" target="_blank">Mona Bisen</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Dr pooja pardhi is very experienced yet helping by behavior. She has higher knowledge of medicine, she has helped me out thoroughly in amidst of second wave of corona by giving us right treatment. Highly Recommended!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/Bqvtd2pHNEyGQiMn7" target="_blank">Ashwini Jadhav</a>
+                    </h6>
+                  </div>
+                  <p>
+                    I have worked under her for approximately 2 years and she is the best physician with thorough knowledge, deep understanding and she has guided all of us at shelar hospital so well. Best ever female physician i know.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/JVKQo3537J4nJHKB8" target="_blank">Shrikant Yejarkar</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Nice doctor,deep knowledge ,very good to share complete know how about the patient.she diagnosed the illness immediately.clear communication with patient and understanding the situation very well. Overall nice and geniun experience with Doctor
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/M2bWXquG8YfJDKA67" target="_blank">Dr. Siddharth jain</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Excellent clinical skills. Dr Pooja treats all patients with best of her knowledge . She gives enough time to every patient and listen all the problems patiently.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-11 col-lg-10 mx-auto">
+              <div class="box">
+                <div class="img-box">
+                  <i class="bi bi-person-circle testimonial_image"></i>
+                </div>
+                <div class="detail-box">
+                  <div class="name">
+                    <h6>
+                      <a href="https://goo.gl/maps/xhBrKYYKGeQFeHpS8" target="_blank">Nikunj Thakur</a>
+                    </h6>
+                  </div>
+                  <p>
+                    Dr. Pooja is a great doctor! She is very understanding and listens to our concerns. In Covid times, she has helped me and my family with her invaluable advice and guidance. She takes time with the patient to help them with their health issues! I highly recommend her to anyone looking for a specialist.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel_btn-container">
+        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+          <i class="bi bi-arrow-left"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+          <i class="bi bi-arrow-right"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="all-reviews-btn text-center">
+        <a class="btn btn-primary control-more" href="https://goo.gl/maps/wmyVXvdqkn5ZoPXD8" target="_blank">
+          All Reviews
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end client section -->
+
+
+<!-- footer section -->
+<footer class="footer_section" id="contactUs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 footer_col">
+        <div class="footer_contact">
+          <h4>
+            Reach at..
+          </h4>
+          <div class="contact_link_box">
+            <a href="https://goo.gl/maps/L1CZrnnL8iXErjre8" target="_blank">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>
+                Plot No - 122, Micron Parkview <br>
+                Sector - 19, Kharghar, Navi Mumbai (M.H)
+              </span>
+            </a>
+            <div>
+              <i class="bi bi-telephone-fill"></i>
+              <span>
+                Call +91 9082164165
+              </span>
+            </div>
+            <div>
+              <i class="bi bi-envelope-fill"></i>
+              <span>
+                drpoojapardhi@gmail.com
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 footer_col">
+        <div class="footer_detail">
+          <h4>
+            About
+          </h4>
+          <p>
+            Dr. Pooja Pardhi Bisen<br>
+            MBBS - Government Medical College Nagpur, 2007<br>
+            DNB (General Medicine)<br>
+            CCEBDM - Certificate course in evidence-based diabetes mellitus
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 mx-auto footer_col">
+        <div class="footer_link_box">
+          <h4>
+            Links
+          </h4>
+          <div class="footer_links">
+            <a href="#top_section">
+              Home
+            </a>
+            <a href="#honours_awards">
+              Awards
+            </a>
+            <a href="#appointment">
+              Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info text-center">
+      <p>
+        &copy; <span id="displayYear"></span>
+        All Rights Reserved By drpoojapardhi@omsaiclinics.in & Developers.
+      </p>      
+    </div>  
+  </div>
+</footer>
+<!-- footer section -->
+
+</body>
+</html>

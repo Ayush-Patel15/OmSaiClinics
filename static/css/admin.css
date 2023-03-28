@@ -1,0 +1,223 @@
+/* Admin PAGE */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+body {
+    background-color: #62d2a2;
+    font-family: 'Nunito', sans-serif;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+/* LOGIN PAGE */
+.admin_login {
+    overflow: hidden;
+    background-color: white;
+    padding: 40px 30px 30px 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+    -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+    transition: transform 300ms, box-shadow 300ms;
+    box-shadow: 5px 10px 10px;
+}
+.admin_login::before, .admin_login::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 45%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 40%;
+    z-index: -1;
+}
+.admin_login::before {
+    left: 40%;
+    bottom: -130%;
+    background-color: rgba(6, 83, 165, 0.15);
+    -webkit-animation: wawes 6s infinite linear;
+    -moz-animation: wawes 6s infinite linear;
+    animation: wawes 6s infinite linear;
+}
+.admin_login::after {
+    left: 35%;
+    bottom: -125%;
+    background-color: rgba(2, 128, 144, 0.2);
+    -webkit-animation: wawes 7s infinite;
+    -moz-animation: wawes 7s infinite;
+    animation: wawes 7s infinite;
+}
+.admin_login > input {
+    display: block;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+}
+.admin_login > button {
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 10px;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    transition: background-color 300ms;
+}
+
+@-webkit-keyframes wawes {
+from {
+    -webkit-transform: rotate(0);
+}
+to {
+    -webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes wawes {
+from {
+    -moz-transform: rotate(0);
+}
+to {
+    -moz-transform: rotate(360deg);
+}
+}
+@keyframes wawes {
+from {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+/* LOGIN PAGE ENDS */
+
+/* ADMIN HOME PAGE */
+#doctorHome{
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: #009879;
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+}
+
+.navbar-brand span {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+#logOut {
+    position: absolute;
+    right: 0;
+}
+
+.about_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;    
+}
+
+.about_section h3{
+    color: rgb(2, 122, 98);;
+    margin-top: 20px;
+}
+
+.doctor {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 0.3;
+    align-items: center;
+}
+  
+.doctor h6{
+    margin-top: 5px;
+}
+
+.doctor img{
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;;
+    object-fit: cover;
+}
+
+.table-filter-button{
+    width: 99%;
+    height: 0px;
+    padding: 25px;
+}
+
+.filter{
+    border-radius: 5px;
+    background-color: rgb(2, 122, 98);;
+}
+
+.table-container{
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    width: 95%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-container thead tr{
+    background-color: rgb(2, 122, 98);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.table-container th,
+.table-container td {
+    padding: 12px 15px;
+}
+
+.table-container tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.table-container tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table-container tbody tr {
+    font-weight: bold;
+}
+
+tr:hover{
+    background-color: #cecece;
+    color: #02856b;
+}
