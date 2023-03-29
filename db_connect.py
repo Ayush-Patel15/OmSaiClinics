@@ -44,4 +44,5 @@ def delete_all_documents_from_collection(db, collection):
         return f"error: {e}"
 
 if __name__ == "__main__":
-    print(connect_to_the_database("OmSaiClinics"))
+    db = connect_to_the_database(database="OmSaiClinics")
+    # print(delete_all_documents_from_collection(db, "patient_appointments"))

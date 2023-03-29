@@ -1,0 +1,65 @@
+<!-- header navigation start -->
+<header class="header">
+    <div class="navbar">
+        <a href="/" class="navbar-brand">
+            <span>Om Sai Clinic</span>
+        </a>
+    </div>
+
+    <div class="navbar" id="logOut">
+        <a href="/" class="navbar-brand" onclick="logOutAdmin();">
+            <span>Log Out</span>
+        </a>
+    </div>
+
+</header>
+<!-- header navigation end -->
+
+<section class="doctor_home" id="doctorHome">
+<!-- doc info -->
+    <div class="about_section">
+        <div class="doctor text-center">
+            <img src="{{ url_for('static', filename='images/doctors_image_mainPage.jpg') }}">
+                <h3><b><u>Dr. Pooja Pardhi Bisen</u></b></h3>
+                <h6>MBBS - Government Medical College Nagpur, 2007 DNB (General Medicine)<br>
+                CCEBDM - Certificate course in evidence-based diabetes mellitus</h6>
+        </div>
+    </div>
+    <!-- Filter buttons -->
+    <div class="table-filter-button">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div class="dropdown">
+                <button class="btn btn-secondary filter" type="button" onclick="todaysPatients();">
+                    TODAY
+                </button>
+                <button class="btn btn-secondary filter" type="button" onclick="tomorrowPatients();">
+                    TOMORROW
+                </button>
+                <button class="btn btn-secondary filter" type="button" onclick="yesterdayPatients();">
+                    YESTERDAY
+                </button>
+                <button class="btn btn-secondary filter" type="button" onclick="allPateints();">
+                    ALL
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment booking table start -->
+    <table class="table-container" id="patientsAppointment">
+        <thead>
+            <tr> 
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone No</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+<!-- Appointment booking table end -->  
+</section>

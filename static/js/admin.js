@@ -1,11 +1,11 @@
 // Global paths - file paths and URLS
-loginHTML = "login.html";
-adminHomeHTML = "adminHome.html";
-loginAuthUrl = "https://omsaiclinics.onrender.com/authLogin"
-AllAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data"
-TodayAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/today"
-TomorrowAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/tomorrow"
-YesterdayAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/yesterday"
+adminLoginUrl = "http://127.0.0.1:5000/adminLogin"
+adminHomeUrl = "http://127.0.0.1:5000/adminHome"
+loginAuthUrl = "http://127.0.0.1:5000/authLogin"
+AllAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data"
+TodayAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/today"
+TomorrowAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/tomorrow"
+YesterdayAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/yesterday"
 
 // as soon as the document loaded, lauch the function
 $(function () {
@@ -17,11 +17,10 @@ $(function () {
     }
 });
 
-
 // Function to load the Login Page 
 function LoadLoginPage() {
     $ajaxUtils.sendGetRequest(
-        loginHTML,
+        adminLoginUrl,
         function (response) {
             // console.log(response.responseText);
             document.querySelector("#mainContent").innerHTML = response.responseText;
@@ -32,9 +31,9 @@ function LoadLoginPage() {
 // Global helper function to load the admin Page
 function LoadAdminPage() {
     $ajaxUtils.sendGetRequest(
-        adminHomeHTML,
+        adminHomeUrl,
         function (response) {
-            // console.log(response.responseText);
+            // console.log("Admin Page");
             document.querySelector("#mainContent").innerHTML = response.responseText;
         }
     );
@@ -44,14 +43,14 @@ function LoadAdminPage() {
 function loadTableData (data) {
     for (var i=0; i < data.length; i++) {
         // console.log(data[i]);
-        $("tbody").append("<tr id=data" + [i] + "></tr>");
+        $("tbody").append("<tr id=data" + i + "></tr>");
         tableData = "";
-        tableData += "<td>" + data[i][0] + "</td>";
-        tableData += "<td>" + data[i][1] + "</td>";
-        tableData += "<td>" + data[i][2] + "</td>";
-        tableData += "<td>" + data[i][3] + "</td>";
-        tableData += "<td>" + data[i][4] + "</td>";
-        tableData += "<td>" + data[i][5] + "</td>";
+        tableData += "<td>" + (i+1) + "</td>";
+        tableData += "<td>" + data[i]["username"] + "</td>";
+        tableData += "<td>" + data[i]["phoneNumber"] + "</td>";
+        tableData += "<td>" + data[i]["appointmentDate"] + "</td>";
+        tableData += "<td>" + data[i]["slot"] + "</td>";
+        tableData += "<td>" + data[i]["message"] + "</td>";
         document.querySelector("#data" + [i]).innerHTML = tableData;
     }
 }
@@ -67,18 +66,20 @@ function loginAdmin() {
             "email": email,
             "password": password
         }
+        // console.log(loginDetails);
         // post request to authenticate login
         $ajaxUtils.sendPostRequest(
             loginAuthUrl,
             function (response) {
                 res = JSON.parse(response.responseText);
                 if (res["status"] == 200) {
+                    console.log("Login Successful");
                     todaysPatients();
                     localStorage.setItem("username", email);
                 }
                 // not success
                 else {
-                    LoadLoginPage();
+                    console.log("Login UnSuccessful");
                     errorMessage = "<b>* Invalid credentials. Please try again..! *</b>"
                     document.querySelector("#errorMsg").innerHTML = errorMessage;
                 }
@@ -87,59 +88,58 @@ function loginAdmin() {
         );
     }
     else {
-        LoadLoginPage();
         errorMessage = "<b>* Please enter emailId and password *</b>"
         document.querySelector("#errorMsg").innerHTML = errorMessage;
     }
 }
 
 // Function to get today's patients records from the database
-function todaysPatients() {
+function todaysPatients () {
     LoadAdminPage();
     $ajaxUtils.sendGetRequest(
         TodayAppointmentDataUrl,
         function (response) {
-            // console.log(response.responseText);
             data = JSON.parse(response.responseText)["data"];
-            loadTableData(data);
-        }
-    );
-}
-
-// Function to get tomorrow's patients records from the database
-function tomorrowPatients() {
-    LoadAdminPage();
-    $ajaxUtils.sendGetRequest(
-        TomorrowAppointmentDataUrl,
-        function (response) {
-            // console.log(response.responseText);
-            data = JSON.parse(response.responseText)["data"];
+            // console.log(data);
             loadTableData(data);
         }
     );
 }
 
 // Function to get yesterday's patients records from the database
-function yesterdayPatients() {
+function yesterdayPatients () {
     LoadAdminPage();
     $ajaxUtils.sendGetRequest(
         YesterdayAppointmentDataUrl,
         function (response) {
-            // console.log(response.responseText);
             data = JSON.parse(response.responseText)["data"];
+            // console.log(data);
+            loadTableData(data);
+        }
+    );
+}
+
+// Function to get tomorrow's patients records from the database
+function tomorrowPatients () {
+    LoadAdminPage();
+    $ajaxUtils.sendGetRequest(
+        TomorrowAppointmentDataUrl,
+        function (response) {
+            data = JSON.parse(response.responseText)["data"];
+            // console.log(data);
             loadTableData(data);
         }
     );
 }
 
 // Function to get all patients records from the database
-function allPatients () {
+function allPateints () {
     LoadAdminPage();
     $ajaxUtils.sendGetRequest(
         AllAppointmentDataUrl,
         function (response) {
-            // console.log(response.responseText);
             data = JSON.parse(response.responseText)["data"];
+            // console.log(data);
             loadTableData(data);
         }
     );
