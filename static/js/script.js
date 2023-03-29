@@ -1,5 +1,5 @@
 // URLS..
-InsertPatientDataUrl = "https://omsaiclinics.onrender.com/post/patientData"
+InsertPatientDataUrl = "http://127.0.0.1:5000/post/patientData"
 
 // client section owl carousel
 $(".client_owl-carousel").owlCarousel({
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded",
 );
 
 // Appointment booking function
-var confirmationHTML = "confirmation_popup.html";
+var confirmationHTML = "templates/confirmation_popup.html";
 function bookAppointment() {
     // console.log("Book Appointment button clicked");
     var username = document.querySelector("#username").value;
@@ -65,6 +65,7 @@ function bookAppointment() {
             "slot": slot,
             "message": message
         }
+        // console.log(patientObj)
         // Post request to insert data
         $ajaxUtils.sendPostRequest(
             InsertPatientDataUrl,
@@ -74,18 +75,11 @@ function bookAppointment() {
             JSON.stringify(patientObj)
         );
         // Confirmation Pop-Up
-        $ajaxUtils.sendGetRequest(
-            confirmationHTML,
-            function (response) {
-                // console.log(response.responseText);
-                document.querySelector("#successConfirmation").innerHTML = response.responseText;
-                successMsg = "Dear " + "<b>" + username + "</b>";
-                successMsg += ", appointment on " + appointmentDate + " at " + slot + " is booked.";
-                successMsg += " Have a nice day ahead..!";
-                document.querySelector(".modal-subheadline").innerHTML = successMsg;
-                $("#staticBackdrop").modal("show");
-            }
-        );
+        successMsg = "Dear " + "<b>" + username + "</b>";
+        successMsg += ", appointment on " + appointmentDate + " at " + slot + " is booked.";
+        successMsg += " Have a nice day ahead..!";
+        document.querySelector(".modal-subheadline").innerHTML = successMsg;
+        $("#staticBackdrop").modal("show");
     }
     else {
         errorMsg = "* All fields are compulsory except the message field *";
