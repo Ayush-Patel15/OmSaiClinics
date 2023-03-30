@@ -2,18 +2,17 @@
 
 # IMPORTS
 from pymongo import MongoClient
-from dotenv import load_dotenv
 from datetime import datetime
 import os
 
 # Load the env file
-load_dotenv()
+# load_dotenv()
 
 # Function to create a connection, with mongodb database
 def connect_to_the_database(database):
     try:
         client = MongoClient(
-            os.environ.get("MONGODB_URI")
+            os.getenv("MONGODB_URI")
         )
         db = client[database]
         return db
