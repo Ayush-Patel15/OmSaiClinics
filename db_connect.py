@@ -5,9 +5,6 @@ from pymongo import MongoClient
 from datetime import datetime
 import os
 
-# Load the env file
-# load_dotenv()
-
 # Function to create a connection, with mongodb database
 def connect_to_the_database(database):
     try:
