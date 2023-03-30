@@ -1,5 +1,5 @@
 // URLS..
-InsertPatientDataUrl = "http://127.0.0.1:5000/post/patientData"
+InsertPatientDataUrl = "https://omsaiclinics.onrender.com/post/patientData"
 
 // client section owl carousel
 $(".client_owl-carousel").owlCarousel({

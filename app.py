@@ -1,10 +1,12 @@
 ## IMPORT STATEMENTS
 from flask import Flask, render_template, request
+from flask_cors import CORS
 from db_connect import connect_to_the_database, insert_in_collection
 import datetime
 
 ## Initialisation
 app = Flask(__name__)
+CORS(app=app)
 
 ################# ROUTES #################
 # Base path to load the home page / landing page of the website

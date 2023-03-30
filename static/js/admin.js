@@ -1,7 +1,7 @@
 // Global paths - file paths and URLS
-adminLoginUrl = "http://127.0.0.1:5000/adminLogin"
-adminHomeUrl = "http://127.0.0.1:5000/adminHome"
-loginAuthUrl = "http://127.0.0.1:5000/authLogin"
+adminLoginUrl = "https://omsaiclinics.onrender.com/adminLogin"
+adminHomeUrl = "https://omsaiclinics.onrender.com/adminHome"
+loginAuthUrl = "https://omsaiclinics.onrender.com/authLogin"
 AllAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data"
 TodayAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/today"
 TomorrowAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/tomorrow"
