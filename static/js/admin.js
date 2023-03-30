@@ -2,10 +2,10 @@
 adminLoginUrl = "https://omsaiclinics.onrender.com/adminLogin"
 adminHomeUrl = "https://omsaiclinics.onrender.com/adminHome"
 loginAuthUrl = "https://omsaiclinics.onrender.com/authLogin"
-AllAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data"
-TodayAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/today"
-TomorrowAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/tomorrow"
-YesterdayAppointmentDataUrl = "http://127.0.0.1:5000/appointments/data/yesterday"
+AllAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data"
+TodayAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/today"
+TomorrowAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/tomorrow"
+YesterdayAppointmentDataUrl = "https://omsaiclinics.onrender.com/appointments/data/yesterday"
 
 // as soon as the document loaded, lauch the function
 $(function () {
