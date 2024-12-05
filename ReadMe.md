@@ -2,7 +2,7 @@
 
 OmSaiClinics is a personal doctor's appointment booking website. A freelancing project that I have completed on my own - including frontend, backend, databases, and hosting services.
 
-Url: [OmSaiClinics](https://omsaiclinics.in/)
+Url: [OmSaiClinics](https://omsaiclinics.onrender.com/)
 
 It consists of following sections:
 
